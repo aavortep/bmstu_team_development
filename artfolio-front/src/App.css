@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "MPLUSRounded1c-ExtraBold";
+  src: url("fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/HelveticaNeueBoldCondensed.ttf");
+}
+
+.Header-box {
+  background-color: #A973C2;
+  min-height: 58px;
+  text-align: center;
+  color: #ffff;
+  font-family: 'MPLUSRounded1c-ExtraBold';
+  font-size: 36pt;
+  position: sticky;
+}
+
+#links {
+  font-family: 'Helvetica Neue';
+  font-size: 15pt;
+  color: #ffff;
+}
+
+#links a:hover {
+  color: #ffff;
+}
+
+.Label-font {
+  font-family: 'Helvetica Neue';
+  font-size: 15pt;
+}
+
+section {
+  width: 1033px;
+  height: 450px;
+  overflow: auto;
+  margin-top: 28px;
+  margin-left: 38px;
+}
+
+#feed_img{
+  width: 277px;
+  height: 222px;
+  background-image: url(images/img_icon.png);
+  background-size: contain;
+  background-position: center;
+}
+
+#feed_img p{
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 15pt;
+  color: #4B4B4B;
+}
+
+#pressed_btn {
+  border-radius: 5px;
+  background-color: #A973C2;
+  border-color: #A973C2;
+  border-width: 4;
+  color: #ffff;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  text-align: center;
+  height: 212px;
+  width: 80px;
+}
+
+#pressed_btn p {
+  padding-top: 85%;
+}
+
+.Side-btn {
+  border-radius: 5px;
+  background-color: #ffff;
+  border-color: #A973C2;
+  border-width: 4pt;
+  color: #A973C2;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 212px;
+  width: 80px;
+}
+
+.Side-btn:hover {
+  border-radius: 5px;
+  background-color: #A973C2;
+  border-color: #A973C2;
+  border-width: 4;
+  color: #ffff;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 212px;
+  width: 80px;
+}
