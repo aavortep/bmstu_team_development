@@ -1,3 +1,7 @@
+# Стиль и внешний вид платформы
+
+[Figma project](https://www.figma.com/file/7n7mZH1OgdbDKUy0iFg12y/artfolio?node-id=0-1&t=8YCSx1sinOyO0BOz-0)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
