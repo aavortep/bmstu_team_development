@@ -6,11 +6,11 @@ import ru.bmstu.portfolio.factory.provider.TProvider
 import scala.collection.mutable
 
 trait TableGatewayFactory {
-  @throws(classOf[ProcessException])
+  @throws[ProcessException]
   def createAlbumTableGateway: TAlbumTableGateway
-  @throws(classOf[ProcessException])
+  @throws[ProcessException]
   def createUserTableGateway: TUserTableGateway
-  @throws(classOf[ProcessException])
+  @throws[ProcessException]
   def createWorkTableGateway: TWorkTableGateway
 }
 

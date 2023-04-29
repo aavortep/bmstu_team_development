@@ -27,5 +27,5 @@ trait TQueryVisitor {
 
 
   @throws[ProcessException]
-  def visitGetWorksBuAlbumIdQuery(query: GetWorksByAlbumIdQuery): Unit
+  def visitGetWorksByAlbumIdQuery(query: GetWorksByAlbumIdQuery): Unit
 }
