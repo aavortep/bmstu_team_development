@@ -33,6 +33,30 @@
   font-size: 15pt;
 }
 
+section {
+  width: 1033px;
+  height: 450px;
+  overflow: auto;
+  margin-top: 28px;
+  margin-left: 38px;
+}
+
+#feed_img{
+  width: 277px;
+  height: 222px;
+  background-image: url(images/img_icon.png);
+  background-size: contain;
+  background-position: center;
+}
+
+#feed_img p{
+  padding-top: 222px;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 15pt;
+  color: #4B4B4B;
+}
+
 .App {
   text-align: center;
 }
