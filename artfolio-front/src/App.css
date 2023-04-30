@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "MPLUSRounded1c-ExtraBold";
+  src: url("fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-ExtraBold.ttf");
+}
+
+.Header-box {
+  background-color: #A973C2;
+  min-height: 58px;
+  text-align: center;
+  color: #ffff;
+  font-family: 'MPLUSRounded1c-ExtraBold';
+  font-size: 36pt;
+  position: sticky;
+}
+
 .App {
   text-align: center;
 }
