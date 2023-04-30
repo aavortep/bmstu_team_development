@@ -3,6 +3,11 @@
   src: url("fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-ExtraBold.ttf");
 }
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/HelveticaNeueBoldCondensed.ttf");
+}
+
 .Header-box {
   background-color: #A973C2;
   min-height: 58px;
@@ -11,6 +16,21 @@
   font-family: 'MPLUSRounded1c-ExtraBold';
   font-size: 36pt;
   position: sticky;
+}
+
+#links {
+  font-family: 'Helvetica Neue';
+  font-size: 15pt;
+  color: #ffff;
+}
+
+#links a:hover {
+  color: #ffff;
+}
+
+.Label-font {
+  font-family: 'Helvetica Neue';
+  font-size: 15pt;
 }
 
 .App {
