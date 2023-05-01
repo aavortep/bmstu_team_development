@@ -5,9 +5,9 @@ class LoginPage extends React.Component {
     render() {
         return (
             <div>
-              <div className='Header-box'>
-                Artfolio
-              </div>
+                <div className='Header-box'>
+                    Artfolio
+                </div>
             </div>
         )
     }
