@@ -18,6 +18,15 @@ function App() {
         </div>
       </div>
 
+      <div>
+        <div id='pressed_btn' style={{position: 'fixed', top: '97px', right: '0'}}>
+          <p>Лента</p>
+        </div>
+        <button type='button' className='Side-btn' style={{position: 'fixed', top: '343px', right: '0'}}>
+          Поиск
+        </button>
+      </div>
+
       <link href="dist/smooth-scrollbar.css" rel="stylesheet"/>
       <script src="dist/smooth-scrollbar.js"></script>
       <section scrollbar>

@@ -56,41 +56,43 @@ section {
   color: #4B4B4B;
 }
 
-.App {
+#pressed_btn {
+  border-radius: 5px;
+  background-color: #A973C2;
+  border-color: #A973C2;
+  border-width: 4;
+  color: #ffff;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
   text-align: center;
+  height: 212px;
+  width: 80px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#pressed_btn p {
+  padding-top: 85%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Side-btn {
+  border-radius: 5px;
+  background-color: #ffff;
+  border-color: #A973C2;
+  border-width: 4pt;
+  color: #A973C2;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 212px;
+  width: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Side-btn:hover {
+  border-radius: 5px;
+  background-color: #A973C2;
+  border-color: #A973C2;
+  border-width: 4;
+  color: #ffff;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 212px;
+  width: 80px;
 }
