@@ -21,4 +21,9 @@ object UserService {
     if (login == "user" && password == "password") Some(AuthResult(UserRef(0, Some("Name")), "token"))
     else None
   }
+
+  def getUsers(): List[UserRef] = {
+    val result = for (i <- 1 to 8) yield {UserRef(i, Some(s"$i-Name-$i"))}
+    result.toList
+  }
 }

@@ -26,7 +26,10 @@ object AlbumService {
 
   def albums(amount: Int, page: Int): List[Album] = {
     val result = for (i <- 1 to amount) yield {
-      Album(Some(i + amount * page), s"name$page-$amount", UserRef(0, Some("Name")), None, "soft", "albumType", "03.05.2023")
+      Album(Some(i + amount * page), s"name$page-$amount", UserRef(0, Some("Name")),
+        if (i % 2 == 0) Some(List(UserRef(1, Some("Name1")), UserRef(2, Some("Name2"))))
+        else None,
+        "soft", "albumType", "03.05.2023")
     }
     result.toList
   }

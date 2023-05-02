@@ -1,4 +1,4 @@
-package ru.bmstu.portfolio.config
+//package ru.bmstu.portfolio.config
 
 //import akka.http.scaladsl.server.{Directive0, Directives}
 //import akka.http.scaladsl.server.directives.AuthenticationResult.{missingJwt, invalidJwt, authenticated}
