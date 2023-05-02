@@ -73,6 +73,32 @@ section {
   padding-top: 85%;
 }
 
+.Btn {
+  border-radius: 5px;
+  background-color: #ffff;
+  border-color: #A973C2;
+  border-width: 4pt;
+  color: #A973C2;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 60px;
+  width: 212px;
+  margin-top: 20px;
+}
+
+.Btn:hover {
+  border-radius: 5px;
+  background-color: #A973C2;
+  border-color: #A973C2;
+  border-width: 4;
+  color: #ffff;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 60px;
+  width: 212px;
+  margin-top: 20px;
+}
+
 .Side-btn {
   border-radius: 5px;
   background-color: #ffff;
@@ -95,4 +121,17 @@ section {
   font-size: 17pt;
   height: 212px;
   width: 80px;
+}
+
+.Text-input {
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border-width: 3pt;
+  border-color: #A973C2;
+  padding: 5px;
+  color: #7A7A7A;
+  font-family: 'Helvetica Neue';
+  font-size: 11pt;
+  margin-top: 20px;
 }
