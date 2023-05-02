@@ -1,3 +1,3 @@
 package ru.bmstu.portfolio.dto
 
-case class Image(id: Int, data: Array[Byte]) {}
+case class Image(id: Int, data: String) {}
