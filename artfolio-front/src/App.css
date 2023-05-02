@@ -56,6 +56,17 @@ section {
   color: #4B4B4B;
 }
 
+#round_img {
+  border-radius: 100px;
+  border-color: #ffff;
+  border-width: 2pt;
+  width: 30px;
+  height: 30px;
+  background-image: url(images/img_icon.png);
+  background-size: contain;
+  background-position: center;
+}
+
 #pressed_btn {
   border-radius: 5px;
   background-color: #A973C2;
