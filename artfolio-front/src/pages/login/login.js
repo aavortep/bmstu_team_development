@@ -3,15 +3,22 @@ import '../../App.css';
 import { Link } from "react-router-dom";
 
 class LoginPage extends React.Component {
+    async sendLogInData(data) {
+        return await fetch('http://176.118.165.63:6670/users/login', {
+            method: 'POST',
+            body: data,
+        })
+    }
+
     async handleLogInForm(event) {
-        //event.preventDefault()
-        //const data = new FormData(event.target)
-        //const response = await this.sendLogInData(data)
-        //if (response.status === 200) {
-        //    const body = await response.json()
-        //    alert("Успешная регистрация:\nТокен:" + body["token"])
-        //}
-        //else alert(response.status)
+        event.preventDefault()
+        const data = new FormData(event.target)
+        const response = await this.sendLogInData(data)
+        if (response.status === 200) {
+            const body = await response.json()
+            alert("Успешная Регистрация:\nТокен:" + body["token"])
+        }
+        else alert(response.status)
     }
 
     render() {

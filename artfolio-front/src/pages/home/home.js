@@ -69,9 +69,9 @@ class HomePage extends React.Component {
                 <div>
                     {JSON.parse(this.feed).map(album => {
                       return (
-                        <a href="home/album" className='Feed-item' key={album["albumId"]}>
+                        <a href={"albums/"+album["albumId"]} className='Feed-item' key={album["albumId"]}>
                           <p className='Center-img'><img className='Feed-item__img' src={"data:image/jpg;base64," + 
-                          JSON.parse(this.works[0])[0]["image"]["data"]} 
+                          JSON.parse(this.works[album["albumId"]-7])[0]["image"]["data"]} 
                           alt={album["name"]}></img></p>
                           <div className='Feed-item__title'>
                             {album["name"]}

@@ -41,11 +41,15 @@ section {
   margin-left: 38px;
 }
 
-.Portfolio {
+.Img-info {
   width: 1033px;
   height: 450px;
   margin-top: 28px;
   margin-left: 38px;
+}
+
+.Img-info__img {
+  max-width: 35%;
 }
 
 .Feed-item {
