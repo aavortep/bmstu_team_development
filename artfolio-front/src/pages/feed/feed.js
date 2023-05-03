@@ -2,6 +2,39 @@ import React from 'react';
 import '../../App.css';
 
 class FeedPage extends React.Component {
+  feed;
+  works = [];
+  constructor(props) {
+      super(props);
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://176.118.165.63:6670/albums', false);
+      try {
+        xhr.send();
+        if (xhr.status !== 200) {
+          alert(`Error ${xhr.status}: ${xhr.statusText}`);
+        } else {
+          this.feed = xhr.response;
+          //alert(JSON.parse(this.resp)[0]["name"]);
+        }
+      } catch(err) {
+        alert("Request failed");
+      }
+      for (let i = 0; i < 6; ++i) {
+        xhr.open('GET', 'http://176.118.165.63:6670/albums/' + (i+7) + '/works', false);
+        try {
+          xhr.send();
+          if (xhr.status !== 200) {
+            alert(`Error ${xhr.status}: ${xhr.statusText}`);
+          } else {
+            this.works.push(xhr.response);
+            //alert(JSON.parse(this.works[i])[0]["image"]["data"]);
+          }
+        } catch(err) {
+          alert("Request failed " + err);
+        }
+      }
+  }
+
     render() {
         return (
             <div>
@@ -29,29 +62,19 @@ class FeedPage extends React.Component {
               <link href="dist/smooth-scrollbar.css" rel="stylesheet"/>
               <script src="dist/smooth-scrollbar.js"></script>
               <section scrollbar>
-                <div id = "feed_img" style={{float: 'left'}}>
-                  <p style={{paddingTop: '190px', textAlign: 'left'}}>Иванов Иван</p>
-                  <p>Альбом 1</p>
-                </div>
-                <div id = "feed_img" style={{marginLeft: '44px', float: 'left'}}>
-                  <p style={{paddingTop: '190px', textAlign: 'left'}}>Иванов Иван</p>
-                  <p>Альбом 2</p>
-                </div>
-                <div id = "feed_img" style={{marginLeft: '44px', float: 'left'}}>
-                  <p style={{paddingTop: '190px', textAlign: 'left'}}>Иванов Иван</p>
-                  <p>Альбом 3</p>
-                </div>
-                <div id = "feed_img" style={{marginTop: '64px', float: 'left'}}>
-                  <p style={{paddingTop: '190px', textAlign: 'left'}}>Иванов Иван</p>
-                  <p>Альбом 4</p>
-                </div>
-                <div id = "feed_img" style={{marginTop: '64px', marginLeft: '44px', float: 'left'}}>
-                  <p style={{paddingTop: '190px', textAlign: 'left'}}>Иванов Иван</p>
-                  <p>Альбом 5</p>
-                </div>
-                <div id = "feed_img" style={{marginTop: '64px', marginLeft: '44px', float: 'left'}}>
-                  <p style={{paddingTop: '190px', textAlign: 'left'}}>Иванов Иван</p>
-                  <p>Альбом 6</p>
+                <div>
+                    {JSON.parse(this.feed).map(album => {
+                      return (
+                        <a href={"albums/"+album["albumId"]} className='Feed-item' key={album["albumId"]}>
+                          <p className='Center-img'><img className='Feed-item__img' src={"data:image/jpg;base64," + 
+                          JSON.parse(this.works[0])[0]["image"]["data"]} 
+                          alt={album["name"]}></img></p>
+                          <div className='Feed-item__title'>
+                            {album["name"]}
+                          </div>
+                        </a>
+                      );
+                    })}
                 </div>
               </section>
             </div>

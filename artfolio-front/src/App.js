@@ -6,6 +6,7 @@ import LoginPage from './pages/login/login.js';
 import SigninPage from './pages/signin/signin.js';
 import SearchPage from './pages/search/search.js';
 import FeedPage from './pages/feed/feed.js';
+import AlbumInfoPage from './pages/album_info/album_info';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/signin' element={<SigninPage/>} />
             <Route path='/search' element={<SearchPage/>} />
             <Route path='/feed' element={<FeedPage/>} />
+            <Route path='/albums/:albumId' element={<AlbumInfoPage/>} />
             <Route exact path='/' element={<Navigate replace to='/home' />} />
           </Routes>
         </Router>
