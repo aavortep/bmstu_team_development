@@ -56,6 +56,17 @@ section {
   color: #4B4B4B;
 }
 
+#round_img {
+  border-radius: 100px;
+  border-color: #ffff;
+  border-width: 2pt;
+  width: 30px;
+  height: 30px;
+  background-image: url(images/img_icon.png);
+  background-size: contain;
+  background-position: center;
+}
+
 #pressed_btn {
   border-radius: 5px;
   background-color: #A973C2;
@@ -71,6 +82,32 @@ section {
 
 #pressed_btn p {
   padding-top: 85%;
+}
+
+.Btn {
+  border-radius: 5px;
+  background-color: #ffff;
+  border-color: #A973C2;
+  border-width: 4pt;
+  color: #A973C2;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 60px;
+  width: 212px;
+  margin-top: 20px;
+}
+
+.Btn:hover {
+  border-radius: 5px;
+  background-color: #A973C2;
+  border-color: #A973C2;
+  border-width: 4;
+  color: #ffff;
+  font-family: 'Helvetica Neue';
+  font-size: 17pt;
+  height: 60px;
+  width: 212px;
+  margin-top: 20px;
 }
 
 .Side-btn {
@@ -95,4 +132,17 @@ section {
   font-size: 17pt;
   height: 212px;
   width: 80px;
+}
+
+.Text-input {
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border-width: 3pt;
+  border-color: #A973C2;
+  padding: 5px;
+  color: #7A7A7A;
+  font-family: 'Helvetica Neue';
+  font-size: 11pt;
+  margin-top: 20px;
 }
