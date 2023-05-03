@@ -11,5 +11,11 @@ lazy val root = (project in file("."))
     name := "portfolio",
     libraryDependencies += scalatest,
     libraryDependencies += scalatestplus,
-    libraryDependencies += mockito
+    libraryDependencies += mockito,
+    libraryDependencies +=  "org.scalaj" %% "scalaj-http" % "2.4.2",
+      libraryDependencies ++= Seq(
+          "org.postgresql" % "postgresql" % "42.5.4"
+    )
+
+
   )

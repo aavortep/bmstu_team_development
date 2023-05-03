@@ -1,0 +1,105 @@
+SET session_replication_role = 'replica';
+--DROP SCHEMA public;
+
+CREATE SCHEMA public AUTHORIZATION pg_database_owner;
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+-- public.users definition
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+	id int4 NOT NULL PRIMARY KEY,
+	fio varchar NOT NULL,
+	birthday date NOT null,
+	"password" varchar NOT NULL,
+	email varchar unique NOT NULL,
+	phone_number varchar NULL,
+	city varchar NOT NULL,
+	country varchar NOT NULL,
+	profession varchar NOT NULL,
+	about text NULL,
+	photo bytea null
+);
+
+-- Permissions
+
+ALTER TABLE public.users OWNER TO postgres;
+GRANT ALL ON TABLE public.users TO postgres;
+
+
+-- public.works definition
+
+-- Drop table
+
+-- DROP TABLE public.works;
+
+CREATE TABLE public.works (
+	id int4 NOT NULL PRIMARY KEY,
+	album_id int4 NOT NULL,
+	"name" varchar NULL,
+	photo bytea NOT NULL,
+	description varchar NULL
+);
+
+-- Permissions
+
+ALTER TABLE public.works OWNER TO postgres;
+GRANT ALL ON TABLE public.works TO postgres;
+
+
+-- public.albums definition
+
+-- Drop table
+
+-- DROP TABLE public.albums;
+
+CREATE TABLE public.albums (
+	id int4 NOT NULL PRIMARY KEY,
+	"name" varchar NOT NULL,
+	software varchar NULL,
+	"type" varchar NOT NULL,
+	creation_date date NOT null,
+	creator int4 not null UNIQUE
+);
+
+-- Permissions
+
+ALTER TABLE public.albums OWNER TO postgres;
+GRANT ALL ON TABLE public.albums TO postgres;
+
+
+-- public.user_album definition
+
+-- Drop table
+
+-- DROP TABLE public.user_album;
+
+CREATE TABLE public.users_albums (
+	id int4 NOT NULL PRIMARY KEY,
+	user_id int4 NOT NULL,
+	album_id int4 NOT NULL,
+	CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES public.users(id),
+	CONSTRAINT album_id FOREIGN KEY (album_id) REFERENCES public.albums(id),
+	CONSTRAINT user_album_un UNIQUE (user_id, album_id)
+);
+
+-- Permissions
+
+ALTER TABLE public.users_albums OWNER TO postgres;
+GRANT ALL ON TABLE public.users_albums TO postgres;
+
+
+-- Add Constraints
+alter table public.works add CONSTRAINT works_un UNIQUE (id, album_id);
+alter table public.works add CONSTRAINT albums_ids FOREIGN KEY (album_id) REFERENCES public.albums(id);
+alter table public.albums add CONSTRAINT creator_id FOREIGN KEY (creator) REFERENCES public.users(id);
+
+-- Permissions
+
+GRANT ALL ON SCHEMA public TO pg_database_owner;
+GRANT USAGE ON SCHEMA public TO public;
+
+SET session_replication_role = 'origin';
